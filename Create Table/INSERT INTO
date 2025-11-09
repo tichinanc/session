@@ -1,0 +1,75 @@
+INSERT INTO claims (
+    claim_id,
+    patient_id,
+    provider_id,
+    insurance_type,
+    billed_amount,
+    paid_amount,
+    claim_status,
+    reason_code,
+    date_of_service,
+    submission_date,
+    payment_date,
+    follow_up_required,
+    ar_status,
+    diagnosis_code,
+    procedure_code
+  )
+VALUES (
+    'claim_id:character varying',
+    'patient_id:bigint',
+    'provider_id:bigint',
+    'insurance_type:character varying',
+    billed_amount:numeric,
+    paid_amount:numeric,
+    'claim_status:character varying',
+    'reason_code:character varying',
+    'date_of_service:date',
+    'submission_date:date',
+    'payment_date:date',
+    'follow_up_required:character varying',
+    'ar_status:character varying',
+    'diagnosis_code:character varying',
+    'procedure_code:character varying'
+  );INSERT INTO claims (
+    claim_id,
+    patient_id,
+    provider_id,
+    insurance_type,
+    billed_amount,
+    paid_amount,
+    claim_status,
+    reason_code,
+    date_of_service,
+    submission_date,
+    payment_date,
+    follow_up_required,
+    ar_status,
+    diagnosis_code,
+    procedure_code
+)
+VALUES (
+    '0HO1FSN4AP',                    -- VARCHAR(50) PRIMARY KEY
+    7936697103,                      -- BIGINT
+    126528997,                       -- BIGINT
+    'Self-Pay',                      -- VARCHAR(50)
+    304.00,                          -- DECIMAL(10,2)
+    203.00,                          -- DECIMAL(10,2)
+    'Paid',                          -- VARCHAR(20)
+    'Incorrect billing information', -- VARCHAR(50)
+    '2024-08-07',                    -- DATE
+    NULL,                            -- DATE (Not available in source CSV)
+    NULL,                            -- DATE (Not available in source CSV)
+    'Yes',                           -- VARCHAR(5)
+    'Pending',                       -- VARCHAR(50)
+    'A02.1',                         -- VARCHAR(20)
+    '99231'                          -- VARCHAR(20)
+);
+
+SELECT *
+FROM claims
+
+
+
+
+
